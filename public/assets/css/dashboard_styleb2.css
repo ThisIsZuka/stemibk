@@ -1,0 +1,415 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'OzoneXMed';
+    src: url('../fonts/DB Ozone X Med.eot');
+    src: url('../fonts/DB Ozone X Med.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DB Ozone X Med.woff') format('woff'),
+         url('../fonts/DB Ozone X Med.ttf') format('truetype'),
+         url('../fonts/DB Ozone X Med.svg#DB Ozone X Med') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OzoneXUltraLi';
+    src: url('../fonts/DB Ozone X UltraLi.eot');
+    src: url('../fonts/DB Ozone X UltraLi.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DB Ozone X UltraLi.woff') format('woff'),
+         url('../fonts/DB Ozone X UltraLi.ttf') format('truetype'),
+         url('../fonts/DB Ozone X UltraLi.svg#DB Ozone X UltraLi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+    color: #464646;
+}
+a:hover{
+    text-decoration: none;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'OzoneXMed',sans-serif,'Segoe UI', Tahoma;
+}
+.section-header{
+    width: 100%;
+    height: 100px;
+    display: block;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    position: relative;
+    
+    /* border-top:5px solid #226899; */
+}
+.notification{
+    width: 55%;
+    float: right;
+    position: relative;
+    text-align: center;
+    border-right: 1px solid #fff;
+}
+
+.box-notification-number{
+    width: 50%;
+    height: 100px;
+    display: table;
+    position: relative;
+    float: left;
+    background: #004977;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.noti-top{
+    display: block;
+    font-size: 20px;
+    line-height: 0.8;
+    color:#eec043;
+    margin-top:15px;
+}
+.th-txt{
+    color: #fff;
+    font-size: 20px;
+}
+/* .txt-left{
+    text-align: left;
+    padding-left: 15px;
+}
+.txt-right{
+    text-align: right;
+    padding-right: 15px;
+} */
+.box-notification-number::after{
+    position: absolute;
+    top: 50%; /* จัดกึ่งกลางแนวตั้ง */
+    left: 100%; /* จัดชิดขวา */
+    width: 0px;
+    height: 0px;
+    content: "";
+    border: solid transparent; /* ขอบทุกด้านโปร่งใส */
+       border-left-color: #888; /* ยกเว้นขอบซ้ายที่มีสี #888 */
+    border-color: rgba(136, 136, 136, 0); /* แก้ปัญหา transparent ใน firefox */
+    margin-top: -50px; /* กำหนด offset เพื่อให้อยู่กึ่งกลางพอดี */
+    border-top: 50px solid transparent;
+      border-left: 50px solid #004977;
+      border-bottom: 50px solid transparent;
+    z-index: 20;
+}
+.box-notification-room{
+    width: 50%;
+    float: left;
+    height: 100px;
+    display: table;
+    position: relative;
+    background: #226899;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.section-content{
+    width: 100%;
+    height: calc(100% - 102px);
+    display: block;
+    position: relative;
+   
+}
+.box-number-noti{
+    font-size: 35px;
+    font-weight: bold;
+    color:#fff;
+}
+.section-bottom{
+    width: 100%;
+    height: 80px;
+    display: block;
+    position: relative;
+}
+.logo{
+    padding-top: 25px;
+    padding-left: 15px;
+    height: 100%;
+    display: table;
+    float: left;
+    position: relative;
+}
+.logo-description{
+    width: 100%;
+    text-align: center;
+}
+.img-res{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    
+}
+.logo img{
+    /* border-bottom: 1px dashed #ddd; */
+    padding-bottom: 10px;
+}
+.location{
+    float: left;
+    height: 100%;
+    line-height: 1;
+    position: relative;
+    text-align: center;
+    width: 150px;
+}
+.clock{
+    font-size: 26px;
+    width: 15%;
+    float: right;
+    height: 100%;
+    background-color: #ccc;
+    position: relative;
+    line-height: 1;
+    color:#555;
+    border-radius: 8px;
+    border-right: 1px solid #fff;
+}
+.clock-time{
+    width: 100%;
+    height: 50%;
+    display: flex; align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+.queuetype{
+    width: 100%;
+    height: 50%;
+    display: flex; align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+.box-left{
+    width:85%;
+    height: 100%;
+    float: left;
+    display: flex;
+    position: relative;
+}
+.box-right{
+    width:15%;
+    height: 100%;
+    display: table;
+    float: left;
+    position: relative;
+}
+.box{
+    width: 25%;
+    display: table;
+    height: 100%;
+    float: left;
+    background-color: #004977;
+    border-right: 1px solid #fff;
+    border-radius: 8px;
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+.opd .box{
+    width: 20%;
+    display: table;
+    height: 100%;
+    float: left;
+    background-color: #fff!important;
+    border-right: 1px solid #eec043;
+    border-radius: 8px;
+    border-bottom: 1px solid #eec043;
+    position: relative;
+}
+.box:first-child{
+    border-left: 1px dashed #fff;
+}
+.box:last-child{
+    border-right: 1px dashed #fff;
+}
+.box-nurse{
+    width: 100%;
+    display: table;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.box-in{
+    width:100%;
+    position: relative;
+    display:table;
+    margin:auto;
+    background-color: #eec043;
+    border-right: 1px solid #fff;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    
+}
+.box-in-header{
+    height: 90px;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+    display: table;
+    color:#004977;
+    line-height: 1;
+}
+.box-in-hold{
+    width:100%;
+    position: relative;
+    display:table;
+    margin:auto;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    
+}
+.box-in-header-hold{
+    height: 50px;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    display: table;
+    color:#fff;
+    line-height: 1;
+}
+.th-txt-sub{
+    font-size:20px;
+}
+.th-txt-room{
+    font-size:28px;
+}
+div.title{
+    display: table;
+    width: 100%;
+    margin-top:11px;
+}
+.box-in-nurse{
+    width:100%;
+    height: 100%;
+    position: relative;
+    display:table;
+    border-radius: 8px;
+    background-color: #004977;
+}
+.box-queue-waiting{
+    width: 100%;
+    height: calc(100% - 90px);
+    position: relative;
+    display: table;
+    border-radius: 8px;
+}
+.box-wait-number{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    border-left: 1px dashed #eec043;
+}
+.opd .box-wait-number{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    border-left: 1px dashed #004977;
+}
+.box-wait-number:first-child{
+    border-left: 0;
+}
+.box-wait-number-header{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: table;
+    font-size: 18px;
+    height: 40px;
+    padding-top:10px;
+    color:#ffd200;
+    border-bottom: 1px dashed #eec043;
+}
+.opd .box-wait-number-header{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: table;
+    font-size: 18px;
+    height: 40px;
+    padding-top:10px;
+    color:#004977;
+    border-bottom: 1px dashed #004977;
+}
+.number-waiting{
+    width:100%;
+    height: calc(100% - 40px);
+    display: block;
+    position: relative;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.number-item{
+    font-weight: bold;
+    width: 95%;
+    display: table;
+    margin:auto;
+    color:#fff;
+    text-align: center;
+    font-size: 26px;
+    line-height: 0.9;
+    letter-spacing: 1px;
+}
+.th-txt-sub-2{
+    font-size: 14px;
+    line-height: 1;
+}
+.opd .number-item{
+    font-weight: bold;
+    width: 95%;
+    display: table;
+    margin:auto;
+    color:#004977;
+    text-align: center;
+    line-height: 0.9;
+}
+.opd .number-itemx{
+    font-weight: bold;
+    width: 95%;
+    display: table;
+    margin:auto;
+    color:#fff;
+    text-align: center;
+    line-height: 0.9;
+}
+/* .number-item:nth-child(odd){
+    background-color: #ddd;
+} */
+.box-in-nurse-header{
+    height: 50px;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    display: table;
+    color:#eec043;
+    line-height: 1;
+}
+/* .box-in-header{
+    width: 
+} */
+
+.th{
+    display: inline-block;
+}
+.en{
+    display: none;
+}
+.item-nurse{
+    width: 100%;
+}
+.nurse-number{
+    font-size: 26px;
+    color: #fff;
+    display: block;
+    text-align: center;
+}

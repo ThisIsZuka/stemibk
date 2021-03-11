@@ -1,0 +1,50 @@
+.inbox-chat{
+    height: 1000px;
+    width: 100%;
+    overflow: auto;
+    background-color: rgb(251, 251, 251);
+}
+
+.input-chatbox{
+    padding: 15px;
+}
+
+.message{
+    border-radius:.3rem;
+    box-shadow: 1px 2px 4px 1px rgba(0, 0, 255, .2);
+    background:rgb(75, 129, 232);
+    border:1px solid #d2d6de;
+    color:#fff;
+    margin:5px 0 0 50px;
+    padding:20px;
+    position:relative;
+    font-size: 50px;
+}
+
+.message{
+    border-radius: 60px !important;
+    position: relative !important;
+    margin-top: 15px !important;
+    padding: 15px !important;
+}
+.message::before{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: -23px;
+    right: 28px;
+    border-bottom: 29px solid rgb(75 129 232 / 87%);
+    border-left: 36px solid transparent;
+    border-right: -1px solid transparent;
+}
+
+.user-chat{
+    font-size: 55px;
+    font-style: bold !important;
+}
+
+
+
+
+

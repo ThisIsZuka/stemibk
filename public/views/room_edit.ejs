@@ -1,0 +1,41 @@
+<html>
+<meta charset="utf-8">
+<form id="form_sendtodoctor">
+
+
+
+   <input type="text" name="name" id="queue_id" value="">
+   <button type="submit" class="btn btn-modal" id="send_to_nurse">ยืนยัน</button>
+</form>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+
+
+
+
+
+
+
+   $("#form_sendtodoctor").submit(function (e) {
+      e.preventDefault();
+      $.ajax({
+         type:'post',
+         url:  '/add_queue',
+         data: $(this).serialize(),
+         success: function (data) {
+            if(data.success){
+               alert('ccxcx');
+            }else{
+               alert('no');
+            }
+         }
+
+      });
+   });
+</script>
+</html>

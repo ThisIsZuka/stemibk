@@ -1,0 +1,17 @@
+
+<script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/socket.io.js"></script>
+<script>
+   $(document).ready(function(){
+      var socket = io('/map');
+
+      socket.on('currenttime',function(data){
+              // $('.clock').html(data+' น.');
+              console.log(data);
+
+
+           });
+   });
+</script>
+
